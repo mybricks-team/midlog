@@ -1,5 +1,5 @@
 {
-  "name": "@mybricks/midlog",
+  "name": "mybricks-midlog",
   "version": "1.0.0",
   "description": "高性能日志中间件",
   "main": "index.js",
