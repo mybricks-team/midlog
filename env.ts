@@ -20,7 +20,7 @@ function getLocalIp() {
 
 export let getEnv = function () {
     var localIp = getLocalIp();
-    if(localIp?.split('.')[0] == '10'){
+    if(localIp && localIp.split('.')[0] == '10'){
         return 'server';
     }else{
         return 'dev';

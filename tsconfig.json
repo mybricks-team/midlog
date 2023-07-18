@@ -1,14 +1,17 @@
 {
-    "compileOnSave": true,
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
-        "sourceMap": true,
+        "sourceMap": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "lib": [ "es2015" ]
     },
     "exclude": [
         "node_modules"
+    ],
+    "include": [
+        "index.ts",
+        "env.ts"
     ]
 }

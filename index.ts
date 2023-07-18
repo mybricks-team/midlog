@@ -1,7 +1,6 @@
 'use strict';
 
 import { init, _Logger, Tracelocal } from "@rockerjs/common";
-import * as _ from "lodash";
 import * as logFactory from "./reqContainer";
 import { getEnv } from './env';
 
@@ -150,7 +149,7 @@ export class MidLog extends _Logger {
 
     public trace(data): any {
         let error = arguments[1];
-        data = _.toString(data) == '[object Object]' ? JSON.stringify(data) : data;
+        data = Object.prototype.toString.call(data) == '[object Object]' ? JSON.stringify(data) : data;
         if(!error){
             MidLog.singleton.trace(data,MidLog.getStackInfn());
         }else{
@@ -160,7 +159,7 @@ export class MidLog extends _Logger {
 
     public debug(data) {
         let error = arguments[1];
-        data = _.toString(data) == '[object Object]' ? JSON.stringify(data) : data;
+        data = Object.prototype.toString.call(data) == '[object Object]' ? JSON.stringify(data) : data;
         if(!error){
             MidLog.singleton.debug(data,MidLog.getStackInfn());
         }else{
@@ -170,7 +169,7 @@ export class MidLog extends _Logger {
 
     public info(data) {
         let error = arguments[1];
-        data = _.toString(data) == '[object Object]' ? JSON.stringify(data) : data;
+        data = Object.prototype.toString.call(data) == '[object Object]' ? JSON.stringify(data) : data;
         if(!error){
             MidLog.singleton.info(data,MidLog.getStackInfn());
         }else{
@@ -180,7 +179,7 @@ export class MidLog extends _Logger {
 
     public warn(data) {
         let error = arguments[1];
-        data = _.toString(data) == '[object Object]' ? JSON.stringify(data) : data;
+        data = Object.prototype.toString.call(data) == '[object Object]' ? JSON.stringify(data) : data;
         if(!error){
             MidLog.singleton.warn(data,MidLog.getStackInfn());
         }else{
@@ -190,7 +189,7 @@ export class MidLog extends _Logger {
 
     public error(data) {
         let error = arguments[1];
-        data = _.toString(data) == '[object Object]' ? JSON.stringify(data) : data;
+        data = Object.prototype.toString.call(data) == '[object Object]' ? JSON.stringify(data) : data;
         if(!error){
             MidLog.singleton.error(data,MidLog.getStackInfn());
         }else{
@@ -200,7 +199,7 @@ export class MidLog extends _Logger {
 
     public fatal(data: string) {
         let error = arguments[1];
-        data = _.toString(data) == '[object Object]' ? JSON.stringify(data) : data;
+        data = Object.prototype.toString.call(data) == '[object Object]' ? JSON.stringify(data) : data;
         if(!error){
             MidLog.singleton.fatal(data,MidLog.getStackInfn());
         }else{
