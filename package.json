@@ -16,12 +16,6 @@
   "devDependencies": {
     "@types/lodash": "^4.14.106",
     "@types/node": "^9.6.1",
-    "@vdian/commons": "^1.1.7",
-    "@vdian/rocker-dao": "^1.2.4",
-    "@vdian/rocker-mvc": "^1.3.10",
-    "@vdian/rpc": "^0.1.11",
-    "@vdian/tracer": "0.0.16",
-    "@vdian/vitamin": "0.0.4",
     "cfork": "^1.6.0",
     "chokidar": "^2.0.4",
     "glob": "^7.1.2",
@@ -39,8 +33,6 @@
   "scripts": {
     "build": "tsc || true",
     "clean": "rimraf *.js *.d.ts *.js.map",
-    "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
-    "prepublish": "npm run build",
     "start": "tsc -w",
     "publishToNpm": "npm run build && npm publish --registry=https://registry.npmjs.org"
   },
