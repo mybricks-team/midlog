@@ -44,18 +44,9 @@
     "start": "tsc -w",
     "publishToNpm": "npm run build && npm publish --registry=https://registry.npmjs.org"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@git.showjoy.net:yuxiu/midlog.git"
-  },
   "keywords": [
     "log",
     "midproxy"
   ],
-  "author": {
-    "name": "yangli",
-    "email": "yl.yuxiu@foxmail.com",
-    "url": "https://github.com/royalrover"
-  },
   "license": "ISC"
 }
